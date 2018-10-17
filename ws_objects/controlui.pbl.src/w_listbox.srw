@@ -56,7 +56,7 @@ destroy(this.lb_1)
 end on
 
 type cb_4 from commandbutton within w_listbox
-integer x = 10
+integer x = 9
 integer y = 456
 integer width = 457
 integer height = 132
@@ -79,7 +79,7 @@ cb_4.text = string(lb_1.multiselect)
 end event
 
 type cb_3 from commandbutton within w_listbox
-integer x = 10
+integer x = 9
 integer y = 324
 integer width = 457
 integer height = 132
@@ -102,7 +102,7 @@ cb_3.text = string(lb_1.vscrollbar)
 end event
 
 type cb_2 from commandbutton within w_listbox
-integer x = 10
+integer x = 9
 integer y = 192
 integer width = 457
 integer height = 132
@@ -125,7 +125,7 @@ cb_2.text = string(lb_1.hscrollbar)
 end event
 
 type cb_1 from commandbutton within w_listbox
-integer x = 10
+integer x = 9
 integer y = 60
 integer width = 457
 integer height = 132
@@ -161,6 +161,7 @@ fontfamily fontfamily = swiss!
 string facename = "Tahoma"
 long textcolor = 33554432
 boolean multiselect = true
+string item[] = {"Hello","World","Mobile","Web"}
 borderstyle borderstyle = stylelowered!
 end type
 

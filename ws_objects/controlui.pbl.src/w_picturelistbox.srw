@@ -67,6 +67,8 @@ fontpitch fontpitch = variable!
 fontfamily fontfamily = swiss!
 string facename = "Tahoma"
 long textcolor = 33554432
+boolean hscrollbar = true
+boolean vscrollbar = true
 string item[] = {"Hello","World","Mobile","Web"}
 borderstyle borderstyle = stylelowered!
 integer itempictureindex[] = {1,2,3,4}
@@ -74,7 +76,7 @@ string picturename[] = {"AddWatch!","AlignBottom!","Animation!","Arrow!"}
 long picturemaskcolor = 536870912
 end type
 
-event selectionchanged;string a[]
+event constructor;string a[]
 string ls_str
 long i
 a[1]="Select a row"
