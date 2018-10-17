@@ -2,6 +2,8 @@
 forward
 global type w_checkbox from window
 end type
+type cb_1 from commandbutton within w_checkbox
+end type
 type cbx_10 from checkbox within w_checkbox
 end type
 type st_9 from statictext within w_checkbox
@@ -54,6 +56,7 @@ boolean resizable = true
 long backcolor = 67108864
 string icon = "AppIcon!"
 boolean center = true
+cb_1 cb_1
 cbx_10 cbx_10
 st_9 st_9
 st_8 st_8
@@ -77,6 +80,7 @@ end type
 global w_checkbox w_checkbox
 
 on w_checkbox.create
+this.cb_1=create cb_1
 this.cbx_10=create cbx_10
 this.st_9=create st_9
 this.st_8=create st_8
@@ -96,7 +100,8 @@ this.cbx_2=create cbx_2
 this.cbx_4=create cbx_4
 this.cbx_3=create cbx_3
 this.cbx_1=create cbx_1
-this.Control[]={this.cbx_10,&
+this.Control[]={this.cb_1,&
+this.cbx_10,&
 this.st_9,&
 this.st_8,&
 this.st_7,&
@@ -118,6 +123,7 @@ this.cbx_1}
 end on
 
 on w_checkbox.destroy
+destroy(this.cb_1)
 destroy(this.cbx_10)
 destroy(this.st_9)
 destroy(this.st_8)
@@ -139,6 +145,26 @@ destroy(this.cbx_3)
 destroy(this.cbx_1)
 end on
 
+type cb_1 from commandbutton within w_checkbox
+integer x = 969
+integer y = 968
+integer width = 457
+integer height = 132
+integer taborder = 10
+integer textsize = -12
+integer weight = 400
+fontcharset fontcharset = ansi!
+fontpitch fontpitch = variable!
+fontfamily fontfamily = swiss!
+string facename = "Tahoma"
+string text = "textcolor"
+end type
+
+event clicked;cbx_4.textcolor = rgb(0,0,225)
+cbx_6.textcolor = rgb(0,225,0)
+cbx_8.textcolor = rgb(225,0,0)
+end event
+
 type cbx_10 from checkbox within w_checkbox
 integer x = 969
 integer y = 1608
@@ -159,8 +185,8 @@ borderstyle borderstyle = styleraised!
 end type
 
 type st_9 from statictext within w_checkbox
-integer x = 10
-integer y = 618
+integer x = 9
+integer y = 620
 integer width = 727
 integer height = 76
 integer textsize = -12
@@ -172,13 +198,12 @@ string facename = "Tahoma"
 long textcolor = 33554432
 long backcolor = 67108864
 string text = "控件鼠标按下状态3"
-boolean border = true
 boolean focusrectangle = false
 end type
 
 type st_8 from statictext within w_checkbox
-integer x = 10
-integer y = 542
+integer x = 9
+integer y = 544
 integer width = 745
 integer height = 76
 integer textsize = -12
@@ -190,13 +215,12 @@ string facename = "Tahoma"
 long textcolor = 33554432
 long backcolor = 67108864
 string text = "控件Normal=focused3"
-boolean border = true
 boolean focusrectangle = false
 end type
 
 type st_7 from statictext within w_checkbox
-integer x = 10
-integer y = 390
+integer x = 9
+integer y = 392
 integer width = 750
 integer height = 76
 integer textsize = -12
@@ -208,13 +232,12 @@ string facename = "Tahoma"
 long textcolor = 33554432
 long backcolor = 67108864
 string text = "focused-unchecked"
-boolean border = true
 boolean focusrectangle = false
 end type
 
 type st_6 from statictext within w_checkbox
-integer x = 10
-integer y = 314
+integer x = 9
+integer y = 316
 integer width = 750
 integer height = 76
 integer textsize = -12
@@ -226,13 +249,12 @@ string facename = "Tahoma"
 long textcolor = 33554432
 long backcolor = 67108864
 string text = "focused-indeterminate"
-boolean border = true
 boolean focusrectangle = false
 end type
 
 type st_5 from statictext within w_checkbox
-integer x = 10
-integer y = 238
+integer x = 9
+integer y = 240
 integer width = 750
 integer height = 76
 integer textsize = -12
@@ -244,13 +266,12 @@ string facename = "Tahoma"
 long textcolor = 33554432
 long backcolor = 67108864
 string text = "focused-checked"
-boolean border = true
 boolean focusrectangle = false
 end type
 
 type st_4 from statictext within w_checkbox
-integer x = 10
-integer y = 162
+integer x = 9
+integer y = 164
 integer width = 750
 integer height = 76
 integer textsize = -12
@@ -262,13 +283,12 @@ string facename = "Tahoma"
 long textcolor = 33554432
 long backcolor = 67108864
 string text = "disabled-unchecked"
-boolean border = true
 boolean focusrectangle = false
 end type
 
 type st_3 from statictext within w_checkbox
-integer x = 10
-integer y = 86
+integer x = 9
+integer y = 88
 integer width = 750
 integer height = 76
 integer textsize = -12
@@ -280,13 +300,12 @@ string facename = "Tahoma"
 long textcolor = 33554432
 long backcolor = 67108864
 string text = "disabled-indeterminate"
-boolean border = true
 boolean focusrectangle = false
 end type
 
 type st_1 from statictext within w_checkbox
-integer x = 10
-integer y = 10
+integer x = 9
+integer y = 12
 integer width = 562
 integer height = 76
 integer textsize = -12
@@ -298,13 +317,12 @@ string facename = "Tahoma"
 long textcolor = 33554432
 long backcolor = 67108864
 string text = "disabled-checked"
-boolean border = true
 boolean focusrectangle = false
 end type
 
 type cbx_6 from checkbox within w_checkbox
 integer x = 969
-integer y = 490
+integer y = 492
 integer width = 457
 integer height = 96
 integer textsize = -12
@@ -321,7 +339,7 @@ end type
 
 type cbx_5 from checkbox within w_checkbox
 integer x = 969
-integer y = 394
+integer y = 396
 integer width = 457
 integer height = 96
 integer textsize = -12
@@ -340,7 +358,7 @@ end type
 
 type st_2 from statictext within w_checkbox
 integer x = 9
-integer y = 466
+integer y = 468
 integer width = 599
 integer height = 76
 integer textsize = -12
@@ -352,24 +370,21 @@ string facename = "Tahoma"
 long textcolor = 33554432
 long backcolor = 67108864
 string text = "鼠标悬浮状态3"
-boolean border = true
 boolean focusrectangle = false
 end type
 
 type cbx_7 from checkbox within w_checkbox
 integer x = 969
-integer y = 586
+integer y = 588
 integer width = 457
 integer height = 96
 string dragicon = "RunReport5!"
 integer textsize = -12
-integer weight = 700
+integer weight = 400
 fontcharset fontcharset = ansi!
 fontpitch fontpitch = variable!
 fontfamily fontfamily = swiss!
 string facename = "Tahoma"
-boolean italic = true
-boolean underline = true
 long textcolor = 33554432
 long backcolor = 67108864
 string text = "LeftText"
@@ -378,7 +393,7 @@ end type
 
 type cbx_9 from checkbox within w_checkbox
 integer x = 969
-integer y = 778
+integer y = 780
 integer width = 457
 integer height = 96
 integer textsize = -12
@@ -387,7 +402,7 @@ fontcharset fontcharset = ansi!
 fontpitch fontpitch = variable!
 fontfamily fontfamily = swiss!
 string facename = "Tahoma"
-long textcolor = 134217858
+long textcolor = 33554432
 long backcolor = 67108864
 string text = "ThreeState"
 boolean threestate = true
@@ -396,7 +411,7 @@ end type
 
 type cbx_8 from checkbox within w_checkbox
 integer x = 969
-integer y = 682
+integer y = 684
 integer width = 457
 integer height = 96
 integer textsize = -12
@@ -416,7 +431,7 @@ end type
 
 type cbx_2 from checkbox within w_checkbox
 integer x = 969
-integer y = 106
+integer y = 108
 integer width = 457
 integer height = 96
 integer textsize = -12
@@ -435,7 +450,7 @@ end type
 
 type cbx_4 from checkbox within w_checkbox
 integer x = 969
-integer y = 298
+integer y = 300
 integer width = 457
 integer height = 96
 integer textsize = -12
@@ -453,7 +468,7 @@ end type
 
 type cbx_3 from checkbox within w_checkbox
 integer x = 969
-integer y = 202
+integer y = 204
 integer width = 457
 integer height = 96
 integer textsize = -12
@@ -470,7 +485,7 @@ end type
 
 type cbx_1 from checkbox within w_checkbox
 integer x = 969
-integer y = 10
+integer y = 12
 integer width = 457
 integer height = 96
 integer textsize = -12
