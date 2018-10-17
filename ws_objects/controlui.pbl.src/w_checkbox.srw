@@ -4,8 +4,6 @@ global type w_checkbox from window
 end type
 type cb_1 from commandbutton within w_checkbox
 end type
-type cbx_10 from checkbox within w_checkbox
-end type
 type st_9 from statictext within w_checkbox
 end type
 type st_8 from statictext within w_checkbox
@@ -57,7 +55,6 @@ long backcolor = 67108864
 string icon = "AppIcon!"
 boolean center = true
 cb_1 cb_1
-cbx_10 cbx_10
 st_9 st_9
 st_8 st_8
 st_7 st_7
@@ -81,7 +78,6 @@ global w_checkbox w_checkbox
 
 on w_checkbox.create
 this.cb_1=create cb_1
-this.cbx_10=create cbx_10
 this.st_9=create st_9
 this.st_8=create st_8
 this.st_7=create st_7
@@ -101,7 +97,6 @@ this.cbx_4=create cbx_4
 this.cbx_3=create cbx_3
 this.cbx_1=create cbx_1
 this.Control[]={this.cb_1,&
-this.cbx_10,&
 this.st_9,&
 this.st_8,&
 this.st_7,&
@@ -124,7 +119,6 @@ end on
 
 on w_checkbox.destroy
 destroy(this.cb_1)
-destroy(this.cbx_10)
 destroy(this.st_9)
 destroy(this.st_8)
 destroy(this.st_7)
@@ -164,25 +158,6 @@ event clicked;cbx_4.textcolor = rgb(0,0,225)
 cbx_6.textcolor = rgb(0,225,0)
 cbx_8.textcolor = rgb(225,0,0)
 end event
-
-type cbx_10 from checkbox within w_checkbox
-integer x = 969
-integer y = 1608
-integer width = 498
-integer height = 144
-integer textsize = -12
-integer weight = 400
-fontcharset fontcharset = ansi!
-fontpitch fontpitch = variable!
-fontfamily fontfamily = swiss!
-string facename = "Tahoma"
-long textcolor = 134217858
-long backcolor = 134217730
-string text = "ThreeState"
-boolean threestate = true
-boolean thirdstate = true
-borderstyle borderstyle = styleraised!
-end type
 
 type st_9 from statictext within w_checkbox
 integer x = 9
