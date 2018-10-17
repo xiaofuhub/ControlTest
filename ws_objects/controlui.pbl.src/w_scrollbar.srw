@@ -76,7 +76,7 @@ integer height = 800
 end type
 
 type hsb_3 from hscrollbar within w_scrollbar
-integer y = 480
+integer y = 460
 integer width = 900
 integer height = 68
 end type
