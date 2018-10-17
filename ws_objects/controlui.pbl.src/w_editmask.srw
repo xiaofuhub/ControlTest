@@ -159,7 +159,7 @@ boolean spin = true
 end type
 
 type em_1 from editmask within w_editmask
-integer x = 467
+integer x = 466
 integer y = 60
 integer width = 457
 integer height = 132
@@ -178,7 +178,7 @@ boolean spin = true
 end type
 
 type em_2 from editmask within w_editmask
-integer x = 924
+integer x = 923
 integer y = 60
 integer width = 457
 integer height = 132
@@ -214,7 +214,7 @@ borderstyle borderstyle = stylelowered!
 end type
 
 type cb_2 from commandbutton within w_editmask
-integer x = 10
+integer x = 9
 integer y = 192
 integer width = 530
 integer height = 132
@@ -247,7 +247,7 @@ ls_Item = lb_1.SelectedItem()
 end event
 
 type cb_1 from commandbutton within w_editmask
-integer x = 10
+integer x = 9
 integer y = 60
 integer width = 457
 integer height = 132

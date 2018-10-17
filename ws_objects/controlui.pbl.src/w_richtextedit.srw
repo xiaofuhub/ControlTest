@@ -32,10 +32,9 @@ destroy(this.rte_1)
 end on
 
 type rte_1 from richtextedit within w_richtextedit
-integer x = 224
-integer y = 244
-integer width = 658
-integer height = 272
+integer y = 60
+integer width = 2514
+integer height = 1280
 integer taborder = 10
 integer textsize = -12
 integer weight = 400
@@ -43,6 +42,18 @@ fontcharset fontcharset = ansi!
 fontpitch fontpitch = variable!
 fontfamily fontfamily = swiss!
 string facename = "Tahoma"
+boolean init_hscrollbar = true
+boolean init_vscrollbar = true
+boolean init_wordwrap = true
+boolean init_pictureframe = true
+boolean init_tabsvisible = true
+boolean init_inputfieldsvisible = true
+boolean init_inputfieldnamesvisible = true
+boolean init_rulerbar = true
+boolean init_tabbar = true
+boolean init_toolbar = true
+boolean init_headerfooter = true
+boolean init_popmenu = true
 borderstyle borderstyle = stylelowered!
 end type
 
