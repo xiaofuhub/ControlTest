@@ -2,6 +2,12 @@
 forward
 global type w_picturelistbox from window
 end type
+type cb_3 from commandbutton within w_picturelistbox
+end type
+type cb_2 from commandbutton within w_picturelistbox
+end type
+type cb_1 from commandbutton within w_picturelistbox
+end type
 type st_1 from statictext within w_picturelistbox
 end type
 type plb_1 from picturelistbox within w_picturelistbox
@@ -12,7 +18,7 @@ global type w_picturelistbox from window
 integer width = 3959
 integer height = 1648
 boolean titlebar = true
-string title = "Untitled"
+string title = "PictureListBox"
 boolean controlmenu = true
 boolean minbox = true
 boolean maxbox = true
@@ -20,22 +26,100 @@ boolean resizable = true
 long backcolor = 67108864
 string icon = "AppIcon!"
 boolean center = true
+cb_3 cb_3
+cb_2 cb_2
+cb_1 cb_1
 st_1 st_1
 plb_1 plb_1
 end type
 global w_picturelistbox w_picturelistbox
 
 on w_picturelistbox.create
+this.cb_3=create cb_3
+this.cb_2=create cb_2
+this.cb_1=create cb_1
 this.st_1=create st_1
 this.plb_1=create plb_1
-this.Control[]={this.st_1,&
+this.Control[]={this.cb_3,&
+this.cb_2,&
+this.cb_1,&
+this.st_1,&
 this.plb_1}
 end on
 
 on w_picturelistbox.destroy
+destroy(this.cb_3)
+destroy(this.cb_2)
+destroy(this.cb_1)
 destroy(this.st_1)
 destroy(this.plb_1)
 end on
+
+type cb_3 from commandbutton within w_picturelistbox
+integer y = 324
+integer width = 457
+integer height = 132
+integer taborder = 40
+integer textsize = -12
+integer weight = 400
+fontcharset fontcharset = ansi!
+fontpitch fontpitch = variable!
+fontfamily fontfamily = swiss!
+string facename = "Tahoma"
+string text = "MultiSelect"
+end type
+
+event clicked;if plb_1.multiselect = true then
+	plb_1.multiselect = false
+else
+	plb_1.multiselect = true
+end if
+cb_3.text = string(plb_1.multiselect)
+end event
+
+type cb_2 from commandbutton within w_picturelistbox
+integer y = 192
+integer width = 457
+integer height = 132
+integer taborder = 30
+integer textsize = -12
+integer weight = 400
+fontcharset fontcharset = ansi!
+fontpitch fontpitch = variable!
+fontfamily fontfamily = swiss!
+string facename = "Tahoma"
+string text = "VScrollBar"
+end type
+
+event clicked;if plb_1.vscrollbar = true then
+	plb_1.vscrollbar = false
+else
+	plb_1.vscrollbar = true
+end if
+cb_2.text = string(plb_1.vscrollbar)
+end event
+
+type cb_1 from commandbutton within w_picturelistbox
+integer y = 60
+integer width = 457
+integer height = 132
+integer taborder = 20
+integer textsize = -12
+integer weight = 400
+fontcharset fontcharset = ansi!
+fontpitch fontpitch = variable!
+fontfamily fontfamily = swiss!
+string facename = "Tahoma"
+string text = "HScrollBar"
+end type
+
+event clicked;if plb_1.hscrollbar = true then
+	plb_1.hscrollbar = false
+else
+	plb_1.hscrollbar = true
+end if
+cb_1.text = string(plb_1.hscrollbar)
+end event
 
 type st_1 from statictext within w_picturelistbox
 integer x = 1934
@@ -55,10 +139,10 @@ boolean focusrectangle = false
 end type
 
 type plb_1 from picturelistbox within w_picturelistbox
-integer x = 352
-integer y = 52
-integer width = 549
-integer height = 476
+integer x = 500
+integer y = 60
+integer width = 759
+integer height = 736
 integer taborder = 10
 integer textsize = -12
 integer weight = 400
@@ -67,8 +151,6 @@ fontpitch fontpitch = variable!
 fontfamily fontfamily = swiss!
 string facename = "Tahoma"
 long textcolor = 33554432
-boolean hscrollbar = true
-boolean vscrollbar = true
 string item[] = {"Hello","World","Mobile","Web"}
 borderstyle borderstyle = stylelowered!
 integer itempictureindex[] = {1,2,3,4}

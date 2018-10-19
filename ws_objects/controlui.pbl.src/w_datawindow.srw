@@ -10,7 +10,7 @@ global type w_datawindow from window
 integer width = 3959
 integer height = 1648
 boolean titlebar = true
-string title = "Untitled"
+string title = "DataWindow"
 boolean controlmenu = true
 boolean minbox = true
 boolean maxbox = true
@@ -32,12 +32,18 @@ destroy(this.dw_1)
 end on
 
 type dw_1 from datawindow within w_datawindow
-integer x = 667
-integer y = 172
-integer width = 686
-integer height = 400
+integer x = 10
+integer y = 60
+integer width = 1500
+integer height = 1000
 integer taborder = 10
-string title = "none"
+boolean titlebar = true
+string title = "datawindow"
+boolean controlmenu = true
+boolean minbox = true
+boolean maxbox = true
+boolean hscrollbar = true
+boolean vscrollbar = true
 boolean livescroll = true
 borderstyle borderstyle = stylelowered!
 end type
