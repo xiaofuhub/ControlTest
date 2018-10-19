@@ -62,7 +62,7 @@ destroy(this.rb_1)
 end on
 
 type cb_1 from commandbutton within w_rediobutton
-integer y = 520
+integer y = 524
 integer width = 457
 integer height = 132
 integer taborder = 10
