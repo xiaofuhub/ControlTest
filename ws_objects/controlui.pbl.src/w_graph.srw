@@ -2,6 +2,8 @@
 forward
 global type w_graph from window
 end type
+type ddlb_1 from dropdownlistbox within w_graph
+end type
 type gr_1 from graph within w_graph
 end type
 end forward
@@ -18,16 +20,20 @@ boolean resizable = true
 long backcolor = 67108864
 string icon = "AppIcon!"
 boolean center = true
+ddlb_1 ddlb_1
 gr_1 gr_1
 end type
 global w_graph w_graph
 
 on w_graph.create
+this.ddlb_1=create ddlb_1
 this.gr_1=create gr_1
-this.Control[]={this.gr_1}
+this.Control[]={this.ddlb_1,&
+this.gr_1}
 end on
 
 on w_graph.destroy
+destroy(this.ddlb_1)
 destroy(this.gr_1)
 end on
 
@@ -223,6 +229,92 @@ for ll_num = 1 to 13
 next
 
 gr_1.setredraw(True)
+
+end event
+
+type ddlb_1 from dropdownlistbox within w_graph
+integer x = 1586
+integer y = 60
+integer width = 1000
+integer height = 476
+integer taborder = 10
+integer textsize = -12
+integer weight = 400
+fontcharset fontcharset = ansi!
+fontpitch fontpitch = variable!
+fontfamily fontfamily = swiss!
+string facename = "Tahoma"
+long textcolor = 33554432
+borderstyle borderstyle = stylelowered!
+end type
+
+event selectionchanged;//if ddlb_1.text = "area3d!" then
+//	gr_1.graphtype = area3d!
+//end if
+
+choose case ddlb_1.text
+	case "area3d!"
+		gr_1.graphtype = area3d!
+	case "areagraph!"
+		gr_1.graphtype = areagraph!
+	case "bar3dgraph!"
+		gr_1.graphtype = bar3dgraph!
+	case "bar3dobjgraph!"
+		gr_1.graphtype = bar3dobjgraph!
+	case "bargraph!"
+		gr_1.graphtype = bargraph!
+	case "barstack3dobjgraph!"
+		gr_1.graphtype = barstack3dobjgraph!
+	case "barstackgraph!"
+		gr_1.graphtype = barstackgraph!
+	case "col3dgraph!"
+		gr_1.graphtype = col3dgraph!
+	case "col3dobjgraph!"
+		gr_1.graphtype = col3dobjgraph!
+	case "colgraph!"
+		gr_1.graphtype = colgraph!
+	case "colstack3dobjgraph!"
+		gr_1.graphtype = colstack3dobjgraph!
+	case "colstackgraph!"
+		gr_1.graphtype = colstackgraph!
+	case "line3d!"
+		gr_1.graphtype = line3d!
+	case "linegraph!"
+		gr_1.graphtype = linegraph!
+	case "pie3d!"
+		gr_1.graphtype = pie3d!
+	case "piegraph!"
+		gr_1.graphtype = piegraph!
+	case "scattergraph!"
+		gr_1.graphtype = scattergraph!
+end choose
+end event
+
+event constructor;string a[]
+string ls_str
+long i
+a[1]="area3d!"
+a[2]="areagraph!"
+a[3]="bar3dgraph!"
+a[4]="bar3dobjgraph!"
+a[5]="bargraph!"
+a[6]="barstack3dobjgraph!"
+a[7]="barstackgraph!"
+a[8]="col3dgraph!"
+a[9]="col3dobjgraph!"
+a[10]="colgraph!"
+a[11]="colstack3dobjgraph!"
+a[12]="colstackgraph!"
+a[13]="line3d!"
+a[14]="linegraph!"
+a[15]="pie3d!"
+a[16]="piegraph!"
+a[17]="scattergraph!"
+for i = 1 to upperbound(a)
+	ddlb_1.AddItem(a[i])
+next
+
+
 
 end event
 
