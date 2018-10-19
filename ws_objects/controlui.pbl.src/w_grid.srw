@@ -10,11 +10,11 @@ global type w_grid from window
 integer width = 3931
 integer height = 1624
 boolean titlebar = true
-string title = "Grid---child"
+string title = "Grid---Child"
 boolean controlmenu = true
 boolean minbox = true
 boolean maxbox = true
-windowtype windowtype = popup!
+windowtype windowtype = child!
 long backcolor = 67108864
 string icon = "AppIcon!"
 boolean center = true
