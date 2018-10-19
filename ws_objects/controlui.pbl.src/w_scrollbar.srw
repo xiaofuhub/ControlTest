@@ -20,7 +20,7 @@ global type w_scrollbar from window
 integer width = 3959
 integer height = 1648
 boolean titlebar = true
-string title = "Untitled"
+string title = "ScrollBar"
 boolean controlmenu = true
 boolean minbox = true
 boolean maxbox = true
@@ -77,13 +77,13 @@ end type
 
 type hsb_3 from hscrollbar within w_scrollbar
 integer y = 460
-integer width = 900
+integer width = 901
 integer height = 68
 end type
 
 type hsb_2 from hscrollbar within w_scrollbar
 integer y = 276
-integer width = 900
+integer width = 901
 integer height = 68
 end type
 
@@ -98,7 +98,7 @@ end type
 
 type hsb_1 from hscrollbar within w_scrollbar
 integer y = 112
-integer width = 900
+integer width = 901
 integer height = 68
 integer maxposition = 100
 integer position = 10
