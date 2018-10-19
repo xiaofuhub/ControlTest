@@ -20,7 +20,7 @@ global type w_singlelineedit from window
 integer width = 3959
 integer height = 1648
 boolean titlebar = true
-string title = "Untitled"
+string title = "SingleLineEdit"
 boolean controlmenu = true
 boolean minbox = true
 boolean maxbox = true
