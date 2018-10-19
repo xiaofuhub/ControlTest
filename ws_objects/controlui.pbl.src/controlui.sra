@@ -32,6 +32,12 @@ destroy(error)
 destroy(message)
 end on
 
-event open;open(w_mdi)
+event open;// Profile PB Demo DB V2017R3
+SQLCA.DBMS = "ODBC"
+SQLCA.AutoCommit = False
+SQLCA.DBParm = "ConnectString='DSN=PB Demo DB V2017R3;UID=dba;PWD=sql'"
+connect;
+
+open(w_mdi)
 end event
 
