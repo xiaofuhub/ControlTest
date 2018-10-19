@@ -41,8 +41,14 @@ integer y = 60
 integer width = 3863
 integer height = 1396
 integer taborder = 10
+boolean titlebar = true
 string title = "none"
 string dataobject = "d_grid"
+boolean controlmenu = true
+boolean minbox = true
+boolean maxbox = true
+boolean hscrollbar = true
+boolean vscrollbar = true
 boolean livescroll = true
 borderstyle borderstyle = stylelowered!
 end type
