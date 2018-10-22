@@ -80,7 +80,7 @@ destroy(this.gb_2)
 end on
 
 type cb_3 from commandbutton within w_groupbox
-integer x = 10
+integer x = 9
 integer y = 1288
 integer width = 457
 integer height = 132
@@ -99,7 +99,7 @@ event clicked;gb_1.backcolor = rgb(225,0,0)
 end event
 
 type cb_2 from commandbutton within w_groupbox
-integer x = 10
+integer x = 9
 integer y = 1156
 integer width = 457
 integer height = 132
@@ -142,7 +142,7 @@ cb_1.text = string(gb_1.enabled)
 end event
 
 type rb_3 from radiobutton within w_groupbox
-integer x = 1700
+integer x = 1701
 integer y = 604
 integer width = 457
 integer height = 96
@@ -165,7 +165,7 @@ end if
 end event
 
 type rb_2 from radiobutton within w_groupbox
-integer x = 1700
+integer x = 1701
 integer y = 412
 integer width = 457
 integer height = 96
@@ -188,7 +188,7 @@ end if
 end event
 
 type rb_1 from radiobutton within w_groupbox
-integer x = 1700
+integer x = 1701
 integer y = 244
 integer width = 457
 integer height = 96
@@ -238,9 +238,9 @@ end if
 end event
 
 type gb_1 from groupbox within w_groupbox
-integer x = 10
+integer x = 9
 integer y = 60
-integer width = 1500
+integer width = 1499
 integer height = 800
 integer taborder = 10
 integer textsize = -12
@@ -255,9 +255,9 @@ string text = "GroupBox"
 end type
 
 type gb_2 from groupbox within w_groupbox
-integer x = 1510
+integer x = 1509
 integer y = 60
-integer width = 1500
+integer width = 1499
 integer height = 800
 integer taborder = 10
 integer textsize = -12
