@@ -7,10 +7,12 @@ end type
 end forward
 
 global type w_picture from window
+integer x = 10
+integer y = 60
 integer width = 3959
 integer height = 1648
 boolean titlebar = true
-string title = "Untitled"
+string title = "Picture"
 boolean controlmenu = true
 boolean minbox = true
 boolean maxbox = true
@@ -32,8 +34,8 @@ destroy(this.p_1)
 end on
 
 type p_1 from picture within w_picture
-integer x = 274
-integer y = 132
+integer x = 10
+integer y = 60
 integer width = 329
 integer height = 176
 boolean originalsize = true

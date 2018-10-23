@@ -10,7 +10,7 @@ global type w_animation from window
 integer width = 3959
 integer height = 1648
 boolean titlebar = true
-string title = "Untitled"
+string title = "Animation"
 boolean controlmenu = true
 boolean minbox = true
 boolean maxbox = true
@@ -32,8 +32,8 @@ destroy(this.am_1)
 end on
 
 type am_1 from animation within w_animation
-integer x = 370
-integer y = 324
+integer x = 10
+integer y = 60
 integer width = 686
 integer height = 600
 integer taborder = 10

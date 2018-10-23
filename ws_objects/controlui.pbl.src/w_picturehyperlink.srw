@@ -10,7 +10,7 @@ global type w_picturehyperlink from window
 integer width = 3959
 integer height = 1648
 boolean titlebar = true
-string title = "Untitled"
+string title = "PictureHyperLink"
 boolean controlmenu = true
 boolean minbox = true
 boolean maxbox = true
@@ -32,8 +32,8 @@ destroy(this.phl_1)
 end on
 
 type phl_1 from picturehyperlink within w_picturehyperlink
-integer x = 626
-integer y = 172
+integer x = 10
+integer y = 60
 integer width = 329
 integer height = 176
 string pointer = "HyperLink!"

@@ -18,7 +18,7 @@ global type w_inkedit from window
 integer width = 3959
 integer height = 1648
 boolean titlebar = true
-string title = "Ink"
+string title = "InkEdit"
 boolean controlmenu = true
 boolean minbox = true
 boolean maxbox = true
@@ -56,7 +56,7 @@ destroy(this.ie_1)
 end on
 
 type cb_2 from commandbutton within w_inkedit
-integer x = 10
+integer x = 9
 integer y = 1184
 integer width = 457
 integer height = 132
@@ -92,7 +92,7 @@ event clicked;ie_1.backcolor = rgb(225,0,0)
 end event
 
 type ie_3 from inkedit within w_inkedit
-integer x = 1016
+integer x = 1015
 integer y = 60
 integer width = 503
 integer height = 864
@@ -111,7 +111,7 @@ boolean vscrollbar = true
 end type
 
 type ie_2 from inkedit within w_inkedit
-integer x = 513
+integer x = 512
 integer y = 60
 integer width = 503
 integer height = 864
@@ -127,7 +127,7 @@ string facename = "Tahoma"
 end type
 
 type ie_1 from inkedit within w_inkedit
-integer x = 10
+integer x = 9
 integer y = 60
 integer width = 503
 integer height = 864

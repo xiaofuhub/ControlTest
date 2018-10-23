@@ -20,7 +20,7 @@ global type w_dropdownpicturelistbox from window
 integer width = 3959
 integer height = 1648
 boolean titlebar = true
-string title = "Untitled"
+string title = "DropDownPictureListBox"
 boolean controlmenu = true
 boolean minbox = true
 boolean maxbox = true
@@ -62,7 +62,7 @@ destroy(this.ddplb_1)
 end on
 
 type cb_5 from commandbutton within w_dropdownpicturelistbox
-integer x = 10
+integer x = 9
 integer y = 588
 integer width = 457
 integer height = 132

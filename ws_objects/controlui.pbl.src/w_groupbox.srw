@@ -2,6 +2,10 @@
 forward
 global type w_groupbox from window
 end type
+type rb_4 from radiobutton within w_groupbox
+end type
+type cbx_2 from checkbox within w_groupbox
+end type
 type cb_3 from commandbutton within w_groupbox
 end type
 type cb_2 from commandbutton within w_groupbox
@@ -34,6 +38,8 @@ boolean resizable = true
 long backcolor = 67108864
 string icon = "AppIcon!"
 boolean center = true
+rb_4 rb_4
+cbx_2 cbx_2
 cb_3 cb_3
 cb_2 cb_2
 cb_1 cb_1
@@ -47,6 +53,8 @@ end type
 global w_groupbox w_groupbox
 
 on w_groupbox.create
+this.rb_4=create rb_4
+this.cbx_2=create cbx_2
 this.cb_3=create cb_3
 this.cb_2=create cb_2
 this.cb_1=create cb_1
@@ -56,7 +64,9 @@ this.rb_1=create rb_1
 this.cbx_1=create cbx_1
 this.gb_1=create gb_1
 this.gb_2=create gb_2
-this.Control[]={this.cb_3,&
+this.Control[]={this.rb_4,&
+this.cbx_2,&
+this.cb_3,&
 this.cb_2,&
 this.cb_1,&
 this.rb_3,&
@@ -68,6 +78,8 @@ this.gb_2}
 end on
 
 on w_groupbox.destroy
+destroy(this.rb_4)
+destroy(this.cbx_2)
 destroy(this.cb_3)
 destroy(this.cb_2)
 destroy(this.cb_1)
@@ -78,6 +90,38 @@ destroy(this.cbx_1)
 destroy(this.gb_1)
 destroy(this.gb_2)
 end on
+
+type rb_4 from radiobutton within w_groupbox
+integer x = 1701
+integer y = 936
+integer width = 457
+integer height = 96
+integer textsize = -12
+integer weight = 400
+fontcharset fontcharset = ansi!
+fontpitch fontpitch = variable!
+fontfamily fontfamily = swiss!
+string facename = "Tahoma"
+long textcolor = 33554432
+long backcolor = 67108864
+string text = "背景透明"
+end type
+
+type cbx_2 from checkbox within w_groupbox
+integer x = 1051
+integer y = 940
+integer width = 457
+integer height = 96
+integer textsize = -12
+integer weight = 400
+fontcharset fontcharset = ansi!
+fontpitch fontpitch = variable!
+fontfamily fontfamily = swiss!
+string facename = "Tahoma"
+long textcolor = 33554432
+long backcolor = 67108864
+string text = "背景透明"
+end type
 
 type cb_3 from commandbutton within w_groupbox
 integer x = 9

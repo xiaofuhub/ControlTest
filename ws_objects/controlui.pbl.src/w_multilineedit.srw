@@ -12,7 +12,7 @@ global type w_multilineedit from window
 integer width = 3959
 integer height = 1648
 boolean titlebar = true
-string title = "Untitled"
+string title = "MultilineEdit"
 boolean controlmenu = true
 boolean minbox = true
 boolean maxbox = true
@@ -38,7 +38,7 @@ destroy(this.mle_1)
 end on
 
 type mle_2 from multilineedit within w_multilineedit
-integer x = 1331
+integer x = 1330
 integer y = 60
 integer width = 1321
 integer height = 600

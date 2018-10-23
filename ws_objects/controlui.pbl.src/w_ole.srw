@@ -10,7 +10,7 @@ global type w_ole from window
 integer width = 3959
 integer height = 1648
 boolean titlebar = true
-string title = "Untitled"
+string title = "OLE"
 boolean controlmenu = true
 boolean minbox = true
 boolean maxbox = true
@@ -32,13 +32,14 @@ destroy(this.ole_1)
 end on
 
 type ole_1 from olecustomcontrol within w_ole
-integer x = 165
-integer y = 256
+integer x = 10
+integer y = 60
 integer width = 503
 integer height = 864
 integer taborder = 10
 borderstyle borderstyle = stylelowered!
 boolean focusrectangle = false
+string binarykey = "w_ole.win"
 integer textsize = -12
 integer weight = 400
 fontcharset fontcharset = ansi!
