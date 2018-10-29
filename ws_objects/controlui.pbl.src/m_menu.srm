@@ -322,7 +322,8 @@ end on
 type m_commandbutton from menu within m_0
 end type
 
-event clicked;open(w_commandbutton)
+event clicked;//open(w_commandbutton)
+Opensheet (w_commandbutton, w_mdi, 2, Original!)
 end event
 
 on m_commandbutton.create
@@ -352,7 +353,9 @@ end on
 type m_picturebutton from menu within m_0
 end type
 
-event clicked;open(w_picturebutton)
+event clicked;//open(w_picturebutton)
+window lwindow
+opensheet(lwindow,"w_picturebutton",w_mdi,1,original!)
 end event
 
 on m_picturebutton.create
