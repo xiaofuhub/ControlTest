@@ -62,7 +62,7 @@ destroy(this.lv_1)
 end on
 
 type cb_4 from commandbutton within w_listview
-integer x = 10
+integer x = 9
 integer y = 324
 integer width = 507
 integer height = 132
@@ -85,8 +85,8 @@ cb_4.text = string(lv_1.fullrowselect)
 end event
 
 type lb_1 from listbox within w_listview
-integer x = 10
-integer y = 609
+integer x = 9
+integer y = 608
 integer width = 549
 integer height = 476
 integer taborder = 40
@@ -102,7 +102,7 @@ borderstyle borderstyle = stylelowered!
 end type
 
 type cb_3 from commandbutton within w_listview
-integer x = 10
+integer x = 9
 integer y = 456
 integer width = 457
 integer height = 132
@@ -130,7 +130,7 @@ end if
 end event
 
 type cb_2 from commandbutton within w_listview
-integer x = 10
+integer x = 9
 integer y = 192
 integer width = 457
 integer height = 132
@@ -153,7 +153,7 @@ cb_2.text = string(lv_1.checkboxes)
 end event
 
 type cb_1 from commandbutton within w_listview
-integer x = 10
+integer x = 9
 integer y = 60
 integer width = 457
 integer height = 132
@@ -194,9 +194,9 @@ boolean twoclickactivate = true
 boolean gridlines = true
 boolean headerdragdrop = true
 boolean fullrowselect = true
-string item[] = {"Hello","World","Mobile","WEB"}
-integer itempictureindex[] = {1,2,3,4}
-string largepicturename[] = {"AddWatch!","AddWatch5!","Application!","Animation!"}
+string item[] = {"Hello","World","Mobile","WEB","YYY"}
+integer itempictureindex[] = {1,2,3,4,5}
+string largepicturename[] = {"AddWatch!","AddWatch5!","Application!","Animation!","Asterisk!"}
 long largepicturemaskcolor = 536870912
 string smallpicturename[] = {"Picture!","SelectObject!","Prior!","Blob!"}
 long smallpicturemaskcolor = 536870912
