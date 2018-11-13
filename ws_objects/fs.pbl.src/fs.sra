@@ -1,7 +1,7 @@
-﻿$PBExportHeader$controlui.sra
+﻿$PBExportHeader$fs.sra
 $PBExportComments$Generated Application Object
 forward
-global type controlui from application
+global type fs from application
 end type
 global transaction sqlca
 global dynamicdescriptionarea sqlda
@@ -10,17 +10,17 @@ global error error
 global message message
 end forward
 
-global type controlui from application
-string appname = "controlui"
-string themestylename = "Flat Design Blue"
-long richtextedittype = 0
+global type fs from application
+string appname = "fs"
+string themestylename = "Flat Design Silver"
+long richtextedittype = 2
 long richtexteditversion = 1
 string richtexteditkey = ""
 end type
-global controlui controlui
+global fs fs
 
-on controlui.create
-appname="controlui"
+on fs.create
+appname="fs"
 message=create message
 sqlca=create transaction
 sqlda=create dynamicdescriptionarea
@@ -28,7 +28,7 @@ sqlsa=create dynamicstagingarea
 error=create error
 end on
 
-on controlui.destroy
+on fs.destroy
 destroy(sqlca)
 destroy(sqlda)
 destroy(sqlsa)
@@ -36,12 +36,6 @@ destroy(error)
 destroy(message)
 end on
 
-event open;// Profile PB Demo DB V2017R3
-SQLCA.DBMS = "ODBC"
-SQLCA.AutoCommit = False
-SQLCA.DBParm = "ConnectString='DSN=PB Demo DB V2018;UID=dba;PWD=sql'"
-connect;
-
-open(w_mdi)
+event open;open(w_001);
 end event
 

@@ -1,7 +1,7 @@
-﻿$PBExportHeader$controlui.sra
+﻿$PBExportHeader$testgraph.sra
 $PBExportComments$Generated Application Object
 forward
-global type controlui from application
+global type testgraph from application
 end type
 global transaction sqlca
 global dynamicdescriptionarea sqlda
@@ -10,17 +10,14 @@ global error error
 global message message
 end forward
 
-global type controlui from application
-string appname = "controlui"
+global type testgraph from application
+string appname = "testgraph"
 string themestylename = "Flat Design Blue"
-long richtextedittype = 0
-long richtexteditversion = 1
-string richtexteditkey = ""
 end type
-global controlui controlui
+global testgraph testgraph
 
-on controlui.create
-appname="controlui"
+on testgraph.create
+appname="testgraph"
 message=create message
 sqlca=create transaction
 sqlda=create dynamicdescriptionarea
@@ -28,7 +25,7 @@ sqlsa=create dynamicstagingarea
 error=create error
 end on
 
-on controlui.destroy
+on testgraph.destroy
 destroy(sqlca)
 destroy(sqlda)
 destroy(sqlsa)
@@ -36,12 +33,10 @@ destroy(error)
 destroy(message)
 end on
 
-event open;// Profile PB Demo DB V2017R3
-SQLCA.DBMS = "ODBC"
+event open;SQLCA.DBMS = "ODBC"
 SQLCA.AutoCommit = False
 SQLCA.DBParm = "ConnectString='DSN=PB Demo DB V2018;UID=dba;PWD=sql'"
-connect;
-
+connect using sqlca;
 open(w_mdi)
 end event
 

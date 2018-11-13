@@ -1,0 +1,295 @@
+﻿$PBExportHeader$m_menu.srm
+forward
+global type m_menu from menu
+end type
+type m_graphdatawindow from menu within m_menu
+end type
+type m_area from menu within m_graphdatawindow
+end type
+type m_bar from menu within m_graphdatawindow
+end type
+type m_col from menu within m_graphdatawindow
+end type
+type m_line from menu within m_graphdatawindow
+end type
+type m_pie from menu within m_graphdatawindow
+end type
+type m_scatter from menu within m_graphdatawindow
+end type
+type m_graphdatawindow from menu within m_menu
+m_area m_area
+m_bar m_bar
+m_col m_col
+m_line m_line
+m_pie m_pie
+m_scatter m_scatter
+end type
+global type m_menu from menu
+m_graphdatawindow m_graphdatawindow
+end type
+end forward
+
+global type m_menu from menu
+m_graphdatawindow m_graphdatawindow
+end type
+global m_menu m_menu
+
+on m_menu.create
+m_menu=this
+call super::create
+this.text = "m_menu"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+this.m_graphdatawindow=create m_graphdatawindow
+this.Item[UpperBound(this.Item)+1]=this.m_graphdatawindow
+end on
+
+on m_menu.destroy
+call super::destroy
+destroy(this.m_graphdatawindow)
+end on
+
+type m_graphdatawindow from menu within m_menu
+m_area m_area
+m_bar m_bar
+m_col m_col
+m_line m_line
+m_pie m_pie
+m_scatter m_scatter
+end type
+
+on m_graphdatawindow.create
+call super::create
+this.text = "GraphDataWindow"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+this.m_area=create m_area
+this.m_bar=create m_bar
+this.m_col=create m_col
+this.m_line=create m_line
+this.m_pie=create m_pie
+this.m_scatter=create m_scatter
+this.Item[UpperBound(this.Item)+1]=this.m_area
+this.Item[UpperBound(this.Item)+1]=this.m_bar
+this.Item[UpperBound(this.Item)+1]=this.m_col
+this.Item[UpperBound(this.Item)+1]=this.m_line
+this.Item[UpperBound(this.Item)+1]=this.m_pie
+this.Item[UpperBound(this.Item)+1]=this.m_scatter
+end on
+
+on m_graphdatawindow.destroy
+call super::destroy
+destroy(this.m_area)
+destroy(this.m_bar)
+destroy(this.m_col)
+destroy(this.m_line)
+destroy(this.m_pie)
+destroy(this.m_scatter)
+end on
+
+type m_area from menu within m_graphdatawindow
+end type
+
+event clicked;open(w_area)
+end event
+
+on m_area.create
+call super::create
+this.text = "Area"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_area.destroy
+call super::destroy
+end on
+
+type m_bar from menu within m_graphdatawindow
+end type
+
+event clicked;open(w_bar)
+end event
+
+on m_bar.create
+call super::create
+this.text = "Bar"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_bar.destroy
+call super::destroy
+end on
+
+type m_col from menu within m_graphdatawindow
+end type
+
+event clicked;open(w_col)
+end event
+
+on m_col.create
+call super::create
+this.text = "Col"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_col.destroy
+call super::destroy
+end on
+
+type m_line from menu within m_graphdatawindow
+end type
+
+event clicked;open(w_line)
+end event
+
+on m_line.create
+call super::create
+this.text = "Line"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_line.destroy
+call super::destroy
+end on
+
+type m_pie from menu within m_graphdatawindow
+end type
+
+event clicked;open(w_pie)
+end event
+
+on m_pie.create
+call super::create
+this.text = "Pie"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_pie.destroy
+call super::destroy
+end on
+
+type m_scatter from menu within m_graphdatawindow
+end type
+
+event clicked;open(w_scatter)
+end event
+
+on m_scatter.create
+call super::create
+this.text = "scatter"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_scatter.destroy
+call super::destroy
+end on
+

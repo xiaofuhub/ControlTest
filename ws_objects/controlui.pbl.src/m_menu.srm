@@ -111,13 +111,21 @@ m_inkedit m_inkedit
 m_inkpicture m_inkpicture
 m_ole m_ole
 end type
+type m_allcontrol from menu within m_menu
+end type
+type m_noborder from menu within m_menu
+end type
 global type m_menu from menu
 m_0 m_0
+m_allcontrol m_allcontrol
+m_noborder m_noborder
 end type
 end forward
 
 global type m_menu from menu
 m_0 m_0
+m_allcontrol m_allcontrol
+m_noborder m_noborder
 end type
 global m_menu m_menu
 
@@ -141,12 +149,18 @@ this.toolbarhighlightcolor = 134217741
 this.toolbargradient = true
 this.bitmapgradient = true
 this.m_0=create m_0
+this.m_allcontrol=create m_allcontrol
+this.m_noborder=create m_noborder
 this.Item[UpperBound(this.Item)+1]=this.m_0
+this.Item[UpperBound(this.Item)+1]=this.m_allcontrol
+this.Item[UpperBound(this.Item)+1]=this.m_noborder
 end on
 
 on m_menu.destroy
 call super::destroy
 destroy(this.m_0)
+destroy(this.m_allcontrol)
+destroy(this.m_noborder)
 end on
 
 event clicked;open(w_checkbox)
@@ -1369,6 +1383,68 @@ this.bitmapgradient = true
 end on
 
 on m_ole.destroy
+call super::destroy
+end on
+
+type m_allcontrol from menu within m_menu
+end type
+
+event clicked;window iwindow
+open(iwindow,"w_allcontrol")
+end event
+
+on m_allcontrol.create
+call super::create
+this.text = "All Control"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_allcontrol.destroy
+call super::destroy
+end on
+
+type m_noborder from menu within m_menu
+end type
+
+event clicked;window iwindow
+open(iwindow,"w_no_border_control")
+end event
+
+on m_noborder.create
+call super::create
+this.text = "No border"
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_noborder.destroy
 call super::destroy
 end on
 

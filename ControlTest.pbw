@@ -1,6 +1,7 @@
 Save Format v3.0(19990112)
 @begin Targets
  0 "controlui.pbt";
+ 1 "fs.pbt";
 @end;
-DefaultTarget "controlui.pbt";
-DefaultRemoteTarget "controlui.pbt";
+DefaultTarget "fs.pbt";
+DefaultRemoteTarget "fs.pbt";
