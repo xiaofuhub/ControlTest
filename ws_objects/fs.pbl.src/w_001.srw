@@ -31,7 +31,7 @@ vtb_1 vtb_1
 htb_1 htb_1
 cb_2 cb_2
 cb_1 cb_1
-string themestylename = "Flat Design Blue"
+string themestylename = "Flat Design Silver"
 long richtextedittype = 2
 long richtexteditversion = 1
 string richtexteditkey = ""
@@ -83,7 +83,7 @@ end type
 
 type vtb_1 from vtrackbar within w_001
 integer x = 485
-integer y = 584
+integer y = 516
 integer width = 155
 integer height = 544
 integer maxposition = 100
