@@ -2,6 +2,8 @@
 forward
 global type w_tabcontrol from window
 end type
+type cb_5 from commandbutton within w_tabcontrol
+end type
 type lb_1 from listbox within w_tabcontrol
 end type
 type cb_4 from commandbutton within w_tabcontrol
@@ -45,6 +47,7 @@ boolean resizable = true
 long backcolor = 67108864
 string icon = "AppIcon!"
 boolean center = true
+cb_5 cb_5
 lb_1 lb_1
 cb_4 cb_4
 cb_3 cb_3
@@ -55,13 +58,15 @@ end type
 global w_tabcontrol w_tabcontrol
 
 on w_tabcontrol.create
+this.cb_5=create cb_5
 this.lb_1=create lb_1
 this.cb_4=create cb_4
 this.cb_3=create cb_3
 this.cb_2=create cb_2
 this.cb_1=create cb_1
 this.tab_1=create tab_1
-this.Control[]={this.lb_1,&
+this.Control[]={this.cb_5,&
+this.lb_1,&
 this.cb_4,&
 this.cb_3,&
 this.cb_2,&
@@ -70,6 +75,7 @@ this.tab_1}
 end on
 
 on w_tabcontrol.destroy
+destroy(this.cb_5)
 destroy(this.lb_1)
 destroy(this.cb_4)
 destroy(this.cb_3)
@@ -77,6 +83,21 @@ destroy(this.cb_2)
 destroy(this.cb_1)
 destroy(this.tab_1)
 end on
+
+type cb_5 from commandbutton within w_tabcontrol
+integer x = 2688
+integer y = 84
+integer width = 457
+integer height = 132
+integer taborder = 20
+integer textsize = -12
+integer weight = 400
+fontcharset fontcharset = ansi!
+fontpitch fontpitch = variable!
+fontfamily fontfamily = swiss!
+string facename = "Tahoma"
+string text = "none"
+end type
 
 type lb_1 from listbox within w_tabcontrol
 integer x = 1563
@@ -96,7 +117,7 @@ borderstyle borderstyle = stylelowered!
 end type
 
 type cb_4 from commandbutton within w_tabcontrol
-integer x = 1482
+integer x = 1481
 integer y = 60
 integer width = 462
 integer height = 132
@@ -134,7 +155,7 @@ end if
 end event
 
 type cb_3 from commandbutton within w_tabcontrol
-integer x = 1025
+integer x = 1024
 integer y = 60
 integer width = 457
 integer height = 132
@@ -149,7 +170,7 @@ string text = "none"
 end type
 
 type cb_2 from commandbutton within w_tabcontrol
-integer x = 467
+integer x = 466
 integer y = 60
 integer width = 558
 integer height = 132
@@ -172,7 +193,7 @@ cb_2.text = string(tab_1.tabpage_1.enabled)
 end event
 
 type cb_1 from commandbutton within w_tabcontrol
-integer x = 10
+integer x = 9
 integer y = 60
 integer width = 457
 integer height = 132
