@@ -2,6 +2,8 @@
 forward
 global type w_treeview from window
 end type
+type cb_4 from commandbutton within w_treeview
+end type
 type cb_3 from commandbutton within w_treeview
 end type
 type cb_2 from commandbutton within w_treeview
@@ -28,6 +30,7 @@ boolean resizable = true
 long backcolor = 67108864
 string icon = "AppIcon!"
 boolean center = true
+cb_4 cb_4
 cb_3 cb_3
 cb_2 cb_2
 cb_1 cb_1
@@ -38,13 +41,15 @@ end type
 global w_treeview w_treeview
 
 on w_treeview.create
+this.cb_4=create cb_4
 this.cb_3=create cb_3
 this.cb_2=create cb_2
 this.cb_1=create cb_1
 this.tv_2=create tv_2
 this.tv_1=create tv_1
 this.tv_test=create tv_test
-this.Control[]={this.cb_3,&
+this.Control[]={this.cb_4,&
+this.cb_3,&
 this.cb_2,&
 this.cb_1,&
 this.tv_2,&
@@ -53,6 +58,7 @@ this.tv_test}
 end on
 
 on w_treeview.destroy
+destroy(this.cb_4)
 destroy(this.cb_3)
 destroy(this.cb_2)
 destroy(this.cb_1)
@@ -123,6 +129,21 @@ tv_2.expanditem(1)
 
 
 end event
+
+type cb_4 from commandbutton within w_treeview
+integer x = 713
+integer y = 1048
+integer width = 457
+integer height = 132
+integer taborder = 40
+integer textsize = -12
+integer weight = 400
+fontcharset fontcharset = ansi!
+fontpitch fontpitch = variable!
+fontfamily fontfamily = swiss!
+string facename = "Tahoma"
+string text = "none"
+end type
 
 type cb_3 from commandbutton within w_treeview
 integer x = 1714
@@ -196,7 +217,7 @@ cb_1.text = string( tv_1.linesatroot)
 end event
 
 type tv_2 from treeview within w_treeview
-integer x = 804
+integer x = 805
 integer y = 100
 integer width = 704
 integer height = 672
@@ -218,7 +239,7 @@ long statepicturemaskcolor = 536870912
 end type
 
 type tv_1 from treeview within w_treeview
-integer x = 1700
+integer x = 1701
 integer y = 100
 integer width = 704
 integer height = 672
@@ -241,7 +262,7 @@ boolean righttoleft = true
 end type
 
 type tv_test from treeview within w_treeview
-integer x = 100
+integer x = 101
 integer y = 100
 integer width = 704
 integer height = 672
