@@ -131,8 +131,8 @@ tv_2.expanditem(1)
 end event
 
 type cb_4 from commandbutton within w_treeview
-integer x = 713
-integer y = 1048
+integer x = 434
+integer y = 1008
 integer width = 457
 integer height = 132
 integer taborder = 40
