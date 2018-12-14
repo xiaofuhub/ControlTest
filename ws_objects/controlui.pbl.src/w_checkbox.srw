@@ -140,8 +140,8 @@ destroy(this.cbx_1)
 end on
 
 type cb_1 from commandbutton within w_checkbox
-integer x = 969
-integer y = 968
+integer x = 1531
+integer y = 728
 integer width = 457
 integer height = 132
 integer taborder = 10
