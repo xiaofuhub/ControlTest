@@ -154,10 +154,6 @@ tab_1 tab_1
 ov_1 ov_1
 r_1 r_1
 rr_1 rr_1
-string themestylename = "Flat Design Blue"
-long richtextedittype = 0
-long richtexteditversion = 1
-string richtexteditkey = ""
 end type
 global w_allcontrol w_allcontrol
 
@@ -386,7 +382,7 @@ boolean border = true
 borderstyle borderstyle = stylelowered!
 date maxdate = Date("2999-12-31")
 date mindate = Date("1800-01-01")
-datetime value = DateTime(Date("2018-11-09"), Time("09:55:21.000000"))
+datetime value = DateTime(Date("2018-12-14"), Time("09:18:15.000000"))
 integer textsize = -12
 fontcharset fontcharset = ansi!
 fontpitch fontpitch = variable!
@@ -813,8 +809,8 @@ end type
 
 type hsb_1 from hscrollbar within w_allcontrol
 string tag = "hscrollbar"
-integer x = 2638
-integer y = 1088
+integer x = 2592
+integer y = 1048
 integer width = 745
 integer height = 68
 integer maxposition = 100
